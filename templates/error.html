@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Error
+{% endblock %}
+
+{% block main %}
+<img alt="{{ top }}" class="border img-fluid" src="https://api.memegen.link/images/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?background=https%3A%2F%2Fi.kym-cdn.com%2Fentries%2Ficons%2Foriginal%2F000%2F019%2F323%2FJarJarBinks.jpg&watermark=MemeComplete.com&token=es3573iwa5fa7wq99rvp" title={{ top }}>
+{% endblock %}

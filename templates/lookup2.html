@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    VIN Lookup
+{% endblock %}
+
+{% block main %}
+    <div class="bg-dark p-3">
+    <form action="/lookup2" method="post">
+        <div class="mb-3">
+            <label for="vin number" class="form-label text-white">VIN Number</label>
+            <input type="text" autocomplete="off" autofocus class="form-control w-auto bg-dark text-grey text-white" placeholder="VIN" name="vin number">
+        </div>
+        <div class="mb-3">
+            <label for="year" class="form-label text-white">Year</label>
+            <input type="text" autocomplete="off" autofocus class="form-control w-auto bg-dark text-grey text-white" placeholder="Year" name="year">
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    </div>
+{% endblock %}

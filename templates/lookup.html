@@ -1,0 +1,33 @@
+import requests
+import json
+
+def get_car_data(vin):
+    "Decode VIN [3]"
+    url = f"https://vpic.nhtsa.dot.gov/api/vehicles/decodevin/{vin}?format=json&modelyear=2021"
+    try:
+        response = requests.get(url)
+        response.raise_for_status()  # Raise an error for HTTP error responses
+        manufacturer_data = response.json()
+        return {
+            "amount": manufacturer_data["Count"],
+            "message": manufacturer_data["Message"],
+            "brand": manufacturer_data["SearchCriteria"],
+            "results": manufacturer_data["Results"],
+        }
+
+    except requests.RequestException as e:
+        print(f"Request error: {e}")
+    except (KeyError, ValueError) as e:
+        print(f"Data parsing error: {e}")
+    return None
+
+car = "JF1VA2W64M9806022"
+locations = get_car_data(car)
+
+for index in locations["results"]:
+    print(index["Variable"], ":", index["Value"])
+
+
+# https://vpic.nhtsa.dot.gov/api/vehicles/decodevin/JF1VA2W64M9806022?format=json&modelyear=2021
+
+# https://vpic.nhtsa.dot.gov/api/vehicles/GetMakeForManufacturer/{make}?format=json

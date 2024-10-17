@@ -1,0 +1,9 @@
+[1] CS50 Fall 2023, Finance Problem Set
+[2] CS50 Fall 2023, Finance Problem Set
+[3] United States Department of Transportation 4/13/2024, NHTSA Product
+Information Catalog Vehicle Listing (vPIC) Application Programming
+Interface (API) https://vpic.nhtsa.dot.gov/api/
+[4] CS50 Fall 2023, Finance Problem Set
+[5] CS50 Fall 2023, Finance Problem Set
+[6] ZetCode 1/29/2024, Python SQLite https://zetcode.com/python/sqlite/
+[7] CS50 Fall 2023, Finance Problem Set

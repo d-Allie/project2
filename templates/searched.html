@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Searched
+{% endblock %}
+
+{% block main %}
+<div class="section p-3">
+    <h2>Car Information</h2>
+        <table>
+            {% for i in results %}
+            <tr>
+                <td>{{ i["Variable"] }} :</td>
+                <td>{{ i["Value"] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+</div>
+{% endblock %}
